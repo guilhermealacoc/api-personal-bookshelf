@@ -6,4 +6,10 @@ declare namespace TypeGenre {
     id: number
     genre: string
   }
+
+  type Delete = {
+    id: number
+    genre: string
+    deletedAt: Date
+  }
 }

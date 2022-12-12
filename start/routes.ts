@@ -23,3 +23,10 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', async ({ view }) => {
   return view.render('welcome')
 })
+
+Route.group(() => {
+  Route.post('/create', 'GenresController.store')
+  Route.get('/list', 'GenresController.listAll')
+  Route.put('/update/:id', 'GenresController.update')
+  Route.delete('/delete/:id', 'GenresController.delete')
+}).prefix('/genres')
