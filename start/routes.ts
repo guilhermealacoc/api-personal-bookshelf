@@ -30,3 +30,7 @@ Route.group(() => {
   Route.put('/update/:id', 'GenresController.update')
   Route.delete('/delete/:id', 'GenresController.delete')
 }).prefix('/genres')
+
+Route.group(() => {
+  Route.post('/create', 'AuthorsController.store')
+}).prefix('/author')
