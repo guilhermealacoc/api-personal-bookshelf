@@ -33,4 +33,6 @@ Route.group(() => {
 
 Route.group(() => {
   Route.post('/create', 'AuthorsController.store')
+  Route.get('/list', 'AuthorsController.listAll')
+  Route.put('/update/:id', 'AuthorsController.update')
 }).prefix('/author')
