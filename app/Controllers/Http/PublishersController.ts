@@ -6,8 +6,6 @@ export default class PublishersController {
 
   public async store({ request, response }: HttpContextContract) {
     const payloadPublisher = request.only(['publisher', 'contact'])
-    console.log(payloadPublisher)
-
     const publisher = await this.publisherService.save(payloadPublisher)
     return response.status(201).json(publisher)
   }
